@@ -17,7 +17,7 @@ jobs:
             server: alecksaq.beget.tech
             port: 22
             local_path: '.'
-            remote_path: '/project'
+            remote_path: './project'
             sftp_only: true
             password: ${{ secrets.FTP_PASSWORD }}
        
