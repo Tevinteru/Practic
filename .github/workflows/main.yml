@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
-      uses: actions/checkout@v
+      uses: actions/checkout@v3
     - name: Deploy file
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
