@@ -9,18 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
-      uses: actions/checkout@v3
-    
-    - name: sync
-      uses: pressidium/lftp-mirror-action@v1
+      uses: actions/checkout@v
+    - name: Deploy file
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        host: alecksaq.beget.tech
-        port: 22
-        user: alecksaq_s
-        pass: ${{ secrets.ftp_password }}
-        localDir: '.'
-        remoteDir: './project'
-        reverse: true
-        onlyNewer: true
-        settings: 'sftp:auto-confirm=yes'
+            username: alecksaq_s
+            server: alecksaq.beget.tech
+            port: 21
+            local_path: '.'
+            remote_path: '/project'
+            sftp_only: true
+            password: ${{ secrets.FTP_PASSWORD }}
        
