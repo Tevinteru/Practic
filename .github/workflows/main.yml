@@ -21,4 +21,6 @@ jobs:
         localDir: '.'
         remoteDir: './project'
         reverse: true
+        onlyNewer: true
+        settings: 'sftp:auto-confirm=yes'
        
