@@ -15,7 +15,7 @@ jobs:
       with:
             username: alecksaq_s
             server: alecksaq.beget.tech
-            port: 21
+            port: 22
             local_path: '.'
             remote_path: '/project'
             sftp_only: true
